@@ -15,7 +15,7 @@ Start blogging in minutes with [Zola](https://www.getzola.org/) and [tabi](https
 
 ## Quick start
 
-1. On the top right of this page, click "Use this template" → "Create a new repository" (or clone this repository)
+1. On the top right of this page, click "Use this template" → "Create a new repository"
 2. Replace placeholders in `content/_index.md` and in the first four lines of `config.toml`
 3. Save your profile photo to `static/img/profile.webp` (or change the path to your image in `content/_index.md`)
 4. Start writing in `content/blog/`. See `content/blog/hello.md` for an example
@@ -48,8 +48,9 @@ Start blogging in minutes with [Zola](https://www.getzola.org/) and [tabi](https
 
 1. [Install Zola](https://www.getzola.org/documentation/getting-started/installation/)
 2. Clone your repository
-3. Run `zola serve`
-4. Visit http://127.0.0.1:1111
+3. Run `git submodule update --init --recursive`
+4. Run `zola serve`
+5. Visit http://127.0.0.1:1111
 
 ## Deployment
 
