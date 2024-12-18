@@ -50,7 +50,7 @@ Start blogging in minutes with [Zola](https://www.getzola.org/) and [tabi](https
 2. Clone your repository
 3. Run `git submodule update --init --recursive`
 4. Run `zola serve`
-5. Visit http://127.0.0.1:1111
+5. Visit http://127.0.0.1:1111. You should see [this](https://tabi-start.pages.dev/).
 
 ## Deployment
 
