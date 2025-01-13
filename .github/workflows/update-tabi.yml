@@ -70,6 +70,7 @@ jobs:
 
           git push origin $BRANCH
           gh pr create \
+            --head $BRANCH \
             --title "⬆️ Update tabi theme to ${{ steps.check.outputs.new_version }}" \
             --body "## Changes in this update
 
