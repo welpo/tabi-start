@@ -20,6 +20,8 @@ Start blogging in minutes with [Zola](https://www.getzola.org/) and [tabi](https
 3. Save your profile photo to `static/img/profile.webp` (or change the path to your image in `content/_index.md`)
 4. Start writing in `content/blog/`. See `content/blog/hello.md` for an example
 
+**Note**: an error like `Tried to build search index for language ko which is not supported`, means Zola does not support search for that language. To disable search, set `build_search_index = false` in `config.toml`
+
 > [!TIP]
 > Take a look through `config.toml` to customise further (set up [social links](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#social-media-icons), your [email](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#encoded-email)…). The [Mastering tabi Settings](https://welpo.github.io/tabi/blog/mastering-tabi-settings/) guide has more details.
 
