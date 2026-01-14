@@ -17,6 +17,6 @@ jobs:
           submodules: true
 
       - name: Zola Build
-        uses: shalzz/zola-deploy-action@v0.19.2
+        uses: shalzz/zola-deploy-action@v0.22.0
         env:
           BUILD_ONLY: true

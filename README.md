@@ -25,6 +25,16 @@ Start blogging in minutes with [Zola](https://www.getzola.org/) and [tabi](https
 > [!TIP]
 > Take a look through `config.toml` to customise further (set up [social links](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#social-media-icons), your [email](https://welpo.github.io/tabi/blog/mastering-tabi-settings/#encoded-email)…). The [Mastering tabi Settings](https://welpo.github.io/tabi/blog/mastering-tabi-settings/) guide has more details.
 
+> [!WARNING]
+> Syntax highlighting works on Zola `0.22.0` and newer. For older versions, set in `config.toml`:
+
+    [markdown]
+    highlight_code = true
+    bottom_footnotes = true
+    # To use a Zola built-in theme, CSP needs to allow unsafe-inline for style-src.
+    highlight_theme = "css"
+    smart_punctuation = true
+
 ## File structure
 
 ```tree
