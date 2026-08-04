@@ -85,7 +85,7 @@ Refer to the [Zola documentation](https://www.getzola.org/documentation/deployme
 
 ### Automated updates
 
-This template includes a [GitHub Action workflow](https://github.com/welpo/tabi-start/blob/main/.github/workflows/update-tabi.yml) that checks for tabi theme updates weekly and creates a PR when updates are available.
+This template includes a [GitHub Action workflow](https://github.com/welpo/tabi-start/blob/main/.github/workflows/update-tabi.yml) that checks for tabi theme updates weekly and pushes them directly to `main` when a build check passes.
 
 #### Setting up permissions
 
@@ -93,19 +93,18 @@ The automated updates require proper GitHub Actions permissions:
 
 1. Go to your repository's Settings → Actions → General
 2. Scroll down to "Workflow permissions"
-3. Enable "Allow GitHub Actions to create and approve pull requests"
+3. Enable "Read and write permissions"
 4. Save changes
 
 <details>
 <summary>How automated updates work (click to read)</summary>
 
 - Every Monday at midnight (UTC), the workflow checks for new tabi versions
-- If an update is found, it creates a PR with:
+- If an update is found, it builds the site with the new theme version
+- If the build succeeds, it commits and pushes the update directly to `main`, with a commit message containing:
   - Detailed changelog
   - Links to relevant commits and PRs
-  - The exact changes being made
-- It runs the Test build workflow. If the build fails, you'll receive an email notification. **Verify the site works locally before merging the PR**
-- You can review and merge these updates at your convenience
+- If the build fails, the workflow fails and you'll receive an email notification. It's likely tabi added a breaking change that needs your manual review.
 
 </details>
 
